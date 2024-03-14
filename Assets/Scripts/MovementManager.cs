@@ -11,9 +11,11 @@ public class MovementManager : MonoBehaviour
     [SerializeField] private Rigidbody hipsRigedbody;
 
     [SerializeField] private float movementSpeed;
+    [SerializeField] private float maximalMovementSpeed;
     [SerializeField] private float jumpForce;
 
     [SerializeField] private Vector3 movement;
+    [SerializeField] private Vector3 speed;
 
     [SerializeField] private bool isGrounded;
 
@@ -37,6 +39,7 @@ public class MovementManager : MonoBehaviour
     private void FixedUpdate()
     {
         Movement(move.ReadValue<Vector2>() * Time.deltaTime);
+        SpeedController();
         Jumping();
     }
 
@@ -48,6 +51,23 @@ public class MovementManager : MonoBehaviour
             movementDirection = new Vector3(movementDirection.x, 0, movementDirection.z);
 
             hipsRigedbody.AddForce(movementDirection * movementSpeed);
+
+        }
+
+        else
+        {
+            hipsRigedbody.velocity = new Vector3(0, hipsRigedbody.velocity.y, 0);
+        }
+    }
+
+    private void SpeedController()
+    {
+         speed = new Vector3(hipsRigedbody.velocity.x, 0, hipsRigedbody.velocity.z);
+
+        if (speed.magnitude > maximalMovementSpeed)
+        {
+            Vector3 speedLimit = speed.normalized * maximalMovementSpeed;
+            hipsRigedbody.velocity = new Vector3(speedLimit.x, hipsRigedbody.velocity.y, speedLimit.z);
         }
     }
 
