@@ -165,6 +165,24 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseLeftArm"",
+                    ""type"": ""Button"",
+                    ""id"": ""8a1f8274-04e1-4f11-81a2-398a0f3aaef7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseRightArm"",
+                    ""type"": ""Button"",
+                    ""id"": ""61acc4f8-e310-4d3c-86de-905ac9b1c74e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -200,6 +218,28 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c8de752d-8129-4afb-aef8-9d526c9e04d8"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseLeftArm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7affc0ab-def9-4db6-8c00-9bce8015cdba"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseRightArm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -216,6 +256,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_ControllerMovementInput_ContollerMovement = m_ControllerMovementInput.FindAction("ContollerMovement", throwIfNotFound: true);
         m_ControllerMovementInput_Test = m_ControllerMovementInput.FindAction("Test", throwIfNotFound: true);
         m_ControllerMovementInput_Jump = m_ControllerMovementInput.FindAction("Jump", throwIfNotFound: true);
+        m_ControllerMovementInput_UseLeftArm = m_ControllerMovementInput.FindAction("UseLeftArm", throwIfNotFound: true);
+        m_ControllerMovementInput_UseRightArm = m_ControllerMovementInput.FindAction("UseRightArm", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -342,6 +384,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_ControllerMovementInput_ContollerMovement;
     private readonly InputAction m_ControllerMovementInput_Test;
     private readonly InputAction m_ControllerMovementInput_Jump;
+    private readonly InputAction m_ControllerMovementInput_UseLeftArm;
+    private readonly InputAction m_ControllerMovementInput_UseRightArm;
     public struct ControllerMovementInputActions
     {
         private @PlayerInput m_Wrapper;
@@ -349,6 +393,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @ContollerMovement => m_Wrapper.m_ControllerMovementInput_ContollerMovement;
         public InputAction @Test => m_Wrapper.m_ControllerMovementInput_Test;
         public InputAction @Jump => m_Wrapper.m_ControllerMovementInput_Jump;
+        public InputAction @UseLeftArm => m_Wrapper.m_ControllerMovementInput_UseLeftArm;
+        public InputAction @UseRightArm => m_Wrapper.m_ControllerMovementInput_UseRightArm;
         public InputActionMap Get() { return m_Wrapper.m_ControllerMovementInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -367,6 +413,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @UseLeftArm.started += instance.OnUseLeftArm;
+            @UseLeftArm.performed += instance.OnUseLeftArm;
+            @UseLeftArm.canceled += instance.OnUseLeftArm;
+            @UseRightArm.started += instance.OnUseRightArm;
+            @UseRightArm.performed += instance.OnUseRightArm;
+            @UseRightArm.canceled += instance.OnUseRightArm;
         }
 
         private void UnregisterCallbacks(IControllerMovementInputActions instance)
@@ -380,6 +432,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @UseLeftArm.started -= instance.OnUseLeftArm;
+            @UseLeftArm.performed -= instance.OnUseLeftArm;
+            @UseLeftArm.canceled -= instance.OnUseLeftArm;
+            @UseRightArm.started -= instance.OnUseRightArm;
+            @UseRightArm.performed -= instance.OnUseRightArm;
+            @UseRightArm.canceled -= instance.OnUseRightArm;
         }
 
         public void RemoveCallbacks(IControllerMovementInputActions instance)
@@ -408,5 +466,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnContollerMovement(InputAction.CallbackContext context);
         void OnTest(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnUseLeftArm(InputAction.CallbackContext context);
+        void OnUseRightArm(InputAction.CallbackContext context);
     }
 }
