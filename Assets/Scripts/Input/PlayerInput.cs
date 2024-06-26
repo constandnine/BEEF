@@ -136,17 +136,125 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""ControllerMovementInput"",
-            ""id"": ""cb42d182-a5a9-4035-9b2b-9605d504aecf"",
+            ""name"": ""ControllerInput"",
+            ""id"": ""c2db2aa9-7b02-4207-a2dc-1fc64c08f94f"",
             ""actions"": [
                 {
                     ""name"": ""ContollerMovement"",
+                    ""type"": ""Value"",
+                    ""id"": ""8da777c3-8c80-4d4c-b9e3-ee36a15770ed"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Test"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""c1437dfb-591b-403e-afa6-6a819124f066"",
+                    ""id"": ""cd176b3b-f808-4b40-95e3-63f971447c2b"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""1248e83c-1ffd-474e-a8c4-fc90887b2ac6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseLeftArm"",
+                    ""type"": ""Button"",
+                    ""id"": ""547ea63b-89a6-4dd9-9c95-87dfa8fc9553"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseRightArm"",
+                    ""type"": ""Button"",
+                    ""id"": ""31d5190c-da23-4478-9609-22265dad0a7b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""66b58a61-e577-44c1-9dd1-c1c94ddccaa1"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ContollerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5b3eba37-d5f4-4d77-8563-2f53ad81ce53"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Test"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""81690e1e-1c30-48ee-ba9c-dc43f4ba1d5f"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""15a424dc-939e-4550-aa0a-860736aa9c24"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseLeftArm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5ddd3be8-1ab8-4dc1-9b1c-c67c139ed762"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseRightArm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""XboxInput"",
+            ""id"": ""cb42d182-a5a9-4035-9b2b-9605d504aecf"",
+            ""actions"": [
+                {
+                    ""name"": ""ContollerMovement"",
+                    ""type"": ""Value"",
+                    ""id"": ""c1437dfb-591b-403e-afa6-6a819124f066"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Test"",
@@ -189,7 +297,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""1387de2b-d3d0-458a-a372-40442fc0d842"",
-                    ""path"": ""<Gamepad>/leftStick"",
+                    ""path"": ""<XInputController>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -200,7 +308,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""74991e13-afc6-4cc8-ba76-9deadffa5d6d"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""path"": ""<XInputController>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -211,7 +319,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e009ee8f-421b-4dbf-b975-b0240caa26c7"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<XInputController>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -222,7 +330,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""c8de752d-8129-4afb-aef8-9d526c9e04d8"",
-                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""path"": ""<XInputController>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -233,7 +341,115 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7affc0ab-def9-4db6-8c00-9bce8015cdba"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""path"": ""<XInputController>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseRightArm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""PlaystationInput"",
+            ""id"": ""7a57bea2-b6dd-4150-91f8-8926630cdbf0"",
+            ""actions"": [
+                {
+                    ""name"": ""ContollerMovement"",
+                    ""type"": ""Value"",
+                    ""id"": ""d785c553-3776-4fd9-9ae8-09feaa5f5061"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Test"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""ab825564-9551-44d8-b8c2-d63a036b2fff"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""dac3c489-ef8e-4437-bce1-7cac60dc775d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseLeftArm"",
+                    ""type"": ""Button"",
+                    ""id"": ""bb589e46-cdc3-4df9-85df-64797d08a94c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseRightArm"",
+                    ""type"": ""Button"",
+                    ""id"": ""ab96827a-4bb7-469d-9025-5c288118b691"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""e39144fb-8ccb-463f-9b40-ab4de67ae4d1"",
+                    ""path"": ""<DualShockGamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ContollerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f97c8e8f-10d1-4db6-ac8b-362f6cd91927"",
+                    ""path"": ""<DualShockGamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Test"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ba3c8b4c-73c8-4e84-a054-075cfdcb2846"",
+                    ""path"": ""<DualShockGamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""133d4f6d-db73-4df7-8240-f89cb78977e1"",
+                    ""path"": ""<DualShockGamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseLeftArm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a886d289-d985-4ec3-8ef1-66f588997ffb"",
+                    ""path"": ""<DualShockGamepad>/rightShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -251,13 +467,27 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_MovementInput_KeyboardMovement = m_MovementInput.FindAction("KeyboardMovement", throwIfNotFound: true);
         m_MovementInput_Jump = m_MovementInput.FindAction("Jump", throwIfNotFound: true);
         m_MovementInput_mouse = m_MovementInput.FindAction("mouse", throwIfNotFound: true);
-        // ControllerMovementInput
-        m_ControllerMovementInput = asset.FindActionMap("ControllerMovementInput", throwIfNotFound: true);
-        m_ControllerMovementInput_ContollerMovement = m_ControllerMovementInput.FindAction("ContollerMovement", throwIfNotFound: true);
-        m_ControllerMovementInput_Test = m_ControllerMovementInput.FindAction("Test", throwIfNotFound: true);
-        m_ControllerMovementInput_Jump = m_ControllerMovementInput.FindAction("Jump", throwIfNotFound: true);
-        m_ControllerMovementInput_UseLeftArm = m_ControllerMovementInput.FindAction("UseLeftArm", throwIfNotFound: true);
-        m_ControllerMovementInput_UseRightArm = m_ControllerMovementInput.FindAction("UseRightArm", throwIfNotFound: true);
+        // ControllerInput
+        m_ControllerInput = asset.FindActionMap("ControllerInput", throwIfNotFound: true);
+        m_ControllerInput_ContollerMovement = m_ControllerInput.FindAction("ContollerMovement", throwIfNotFound: true);
+        m_ControllerInput_Test = m_ControllerInput.FindAction("Test", throwIfNotFound: true);
+        m_ControllerInput_Jump = m_ControllerInput.FindAction("Jump", throwIfNotFound: true);
+        m_ControllerInput_UseLeftArm = m_ControllerInput.FindAction("UseLeftArm", throwIfNotFound: true);
+        m_ControllerInput_UseRightArm = m_ControllerInput.FindAction("UseRightArm", throwIfNotFound: true);
+        // XboxInput
+        m_XboxInput = asset.FindActionMap("XboxInput", throwIfNotFound: true);
+        m_XboxInput_ContollerMovement = m_XboxInput.FindAction("ContollerMovement", throwIfNotFound: true);
+        m_XboxInput_Test = m_XboxInput.FindAction("Test", throwIfNotFound: true);
+        m_XboxInput_Jump = m_XboxInput.FindAction("Jump", throwIfNotFound: true);
+        m_XboxInput_UseLeftArm = m_XboxInput.FindAction("UseLeftArm", throwIfNotFound: true);
+        m_XboxInput_UseRightArm = m_XboxInput.FindAction("UseRightArm", throwIfNotFound: true);
+        // PlaystationInput
+        m_PlaystationInput = asset.FindActionMap("PlaystationInput", throwIfNotFound: true);
+        m_PlaystationInput_ContollerMovement = m_PlaystationInput.FindAction("ContollerMovement", throwIfNotFound: true);
+        m_PlaystationInput_Test = m_PlaystationInput.FindAction("Test", throwIfNotFound: true);
+        m_PlaystationInput_Jump = m_PlaystationInput.FindAction("Jump", throwIfNotFound: true);
+        m_PlaystationInput_UseLeftArm = m_PlaystationInput.FindAction("UseLeftArm", throwIfNotFound: true);
+        m_PlaystationInput_UseRightArm = m_PlaystationInput.FindAction("UseRightArm", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -378,32 +608,32 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     }
     public MovementInputActions @MovementInput => new MovementInputActions(this);
 
-    // ControllerMovementInput
-    private readonly InputActionMap m_ControllerMovementInput;
-    private List<IControllerMovementInputActions> m_ControllerMovementInputActionsCallbackInterfaces = new List<IControllerMovementInputActions>();
-    private readonly InputAction m_ControllerMovementInput_ContollerMovement;
-    private readonly InputAction m_ControllerMovementInput_Test;
-    private readonly InputAction m_ControllerMovementInput_Jump;
-    private readonly InputAction m_ControllerMovementInput_UseLeftArm;
-    private readonly InputAction m_ControllerMovementInput_UseRightArm;
-    public struct ControllerMovementInputActions
+    // ControllerInput
+    private readonly InputActionMap m_ControllerInput;
+    private List<IControllerInputActions> m_ControllerInputActionsCallbackInterfaces = new List<IControllerInputActions>();
+    private readonly InputAction m_ControllerInput_ContollerMovement;
+    private readonly InputAction m_ControllerInput_Test;
+    private readonly InputAction m_ControllerInput_Jump;
+    private readonly InputAction m_ControllerInput_UseLeftArm;
+    private readonly InputAction m_ControllerInput_UseRightArm;
+    public struct ControllerInputActions
     {
         private @PlayerInput m_Wrapper;
-        public ControllerMovementInputActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @ContollerMovement => m_Wrapper.m_ControllerMovementInput_ContollerMovement;
-        public InputAction @Test => m_Wrapper.m_ControllerMovementInput_Test;
-        public InputAction @Jump => m_Wrapper.m_ControllerMovementInput_Jump;
-        public InputAction @UseLeftArm => m_Wrapper.m_ControllerMovementInput_UseLeftArm;
-        public InputAction @UseRightArm => m_Wrapper.m_ControllerMovementInput_UseRightArm;
-        public InputActionMap Get() { return m_Wrapper.m_ControllerMovementInput; }
+        public ControllerInputActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ContollerMovement => m_Wrapper.m_ControllerInput_ContollerMovement;
+        public InputAction @Test => m_Wrapper.m_ControllerInput_Test;
+        public InputAction @Jump => m_Wrapper.m_ControllerInput_Jump;
+        public InputAction @UseLeftArm => m_Wrapper.m_ControllerInput_UseLeftArm;
+        public InputAction @UseRightArm => m_Wrapper.m_ControllerInput_UseRightArm;
+        public InputActionMap Get() { return m_Wrapper.m_ControllerInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(ControllerMovementInputActions set) { return set.Get(); }
-        public void AddCallbacks(IControllerMovementInputActions instance)
+        public static implicit operator InputActionMap(ControllerInputActions set) { return set.Get(); }
+        public void AddCallbacks(IControllerInputActions instance)
         {
-            if (instance == null || m_Wrapper.m_ControllerMovementInputActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_ControllerMovementInputActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_ControllerInputActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_ControllerInputActionsCallbackInterfaces.Add(instance);
             @ContollerMovement.started += instance.OnContollerMovement;
             @ContollerMovement.performed += instance.OnContollerMovement;
             @ContollerMovement.canceled += instance.OnContollerMovement;
@@ -421,7 +651,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @UseRightArm.canceled += instance.OnUseRightArm;
         }
 
-        private void UnregisterCallbacks(IControllerMovementInputActions instance)
+        private void UnregisterCallbacks(IControllerInputActions instance)
         {
             @ContollerMovement.started -= instance.OnContollerMovement;
             @ContollerMovement.performed -= instance.OnContollerMovement;
@@ -440,28 +670,200 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @UseRightArm.canceled -= instance.OnUseRightArm;
         }
 
-        public void RemoveCallbacks(IControllerMovementInputActions instance)
+        public void RemoveCallbacks(IControllerInputActions instance)
         {
-            if (m_Wrapper.m_ControllerMovementInputActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_ControllerInputActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IControllerMovementInputActions instance)
+        public void SetCallbacks(IControllerInputActions instance)
         {
-            foreach (var item in m_Wrapper.m_ControllerMovementInputActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_ControllerInputActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_ControllerMovementInputActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_ControllerInputActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public ControllerMovementInputActions @ControllerMovementInput => new ControllerMovementInputActions(this);
+    public ControllerInputActions @ControllerInput => new ControllerInputActions(this);
+
+    // XboxInput
+    private readonly InputActionMap m_XboxInput;
+    private List<IXboxInputActions> m_XboxInputActionsCallbackInterfaces = new List<IXboxInputActions>();
+    private readonly InputAction m_XboxInput_ContollerMovement;
+    private readonly InputAction m_XboxInput_Test;
+    private readonly InputAction m_XboxInput_Jump;
+    private readonly InputAction m_XboxInput_UseLeftArm;
+    private readonly InputAction m_XboxInput_UseRightArm;
+    public struct XboxInputActions
+    {
+        private @PlayerInput m_Wrapper;
+        public XboxInputActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ContollerMovement => m_Wrapper.m_XboxInput_ContollerMovement;
+        public InputAction @Test => m_Wrapper.m_XboxInput_Test;
+        public InputAction @Jump => m_Wrapper.m_XboxInput_Jump;
+        public InputAction @UseLeftArm => m_Wrapper.m_XboxInput_UseLeftArm;
+        public InputAction @UseRightArm => m_Wrapper.m_XboxInput_UseRightArm;
+        public InputActionMap Get() { return m_Wrapper.m_XboxInput; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(XboxInputActions set) { return set.Get(); }
+        public void AddCallbacks(IXboxInputActions instance)
+        {
+            if (instance == null || m_Wrapper.m_XboxInputActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_XboxInputActionsCallbackInterfaces.Add(instance);
+            @ContollerMovement.started += instance.OnContollerMovement;
+            @ContollerMovement.performed += instance.OnContollerMovement;
+            @ContollerMovement.canceled += instance.OnContollerMovement;
+            @Test.started += instance.OnTest;
+            @Test.performed += instance.OnTest;
+            @Test.canceled += instance.OnTest;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
+            @UseLeftArm.started += instance.OnUseLeftArm;
+            @UseLeftArm.performed += instance.OnUseLeftArm;
+            @UseLeftArm.canceled += instance.OnUseLeftArm;
+            @UseRightArm.started += instance.OnUseRightArm;
+            @UseRightArm.performed += instance.OnUseRightArm;
+            @UseRightArm.canceled += instance.OnUseRightArm;
+        }
+
+        private void UnregisterCallbacks(IXboxInputActions instance)
+        {
+            @ContollerMovement.started -= instance.OnContollerMovement;
+            @ContollerMovement.performed -= instance.OnContollerMovement;
+            @ContollerMovement.canceled -= instance.OnContollerMovement;
+            @Test.started -= instance.OnTest;
+            @Test.performed -= instance.OnTest;
+            @Test.canceled -= instance.OnTest;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
+            @UseLeftArm.started -= instance.OnUseLeftArm;
+            @UseLeftArm.performed -= instance.OnUseLeftArm;
+            @UseLeftArm.canceled -= instance.OnUseLeftArm;
+            @UseRightArm.started -= instance.OnUseRightArm;
+            @UseRightArm.performed -= instance.OnUseRightArm;
+            @UseRightArm.canceled -= instance.OnUseRightArm;
+        }
+
+        public void RemoveCallbacks(IXboxInputActions instance)
+        {
+            if (m_Wrapper.m_XboxInputActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IXboxInputActions instance)
+        {
+            foreach (var item in m_Wrapper.m_XboxInputActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_XboxInputActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public XboxInputActions @XboxInput => new XboxInputActions(this);
+
+    // PlaystationInput
+    private readonly InputActionMap m_PlaystationInput;
+    private List<IPlaystationInputActions> m_PlaystationInputActionsCallbackInterfaces = new List<IPlaystationInputActions>();
+    private readonly InputAction m_PlaystationInput_ContollerMovement;
+    private readonly InputAction m_PlaystationInput_Test;
+    private readonly InputAction m_PlaystationInput_Jump;
+    private readonly InputAction m_PlaystationInput_UseLeftArm;
+    private readonly InputAction m_PlaystationInput_UseRightArm;
+    public struct PlaystationInputActions
+    {
+        private @PlayerInput m_Wrapper;
+        public PlaystationInputActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ContollerMovement => m_Wrapper.m_PlaystationInput_ContollerMovement;
+        public InputAction @Test => m_Wrapper.m_PlaystationInput_Test;
+        public InputAction @Jump => m_Wrapper.m_PlaystationInput_Jump;
+        public InputAction @UseLeftArm => m_Wrapper.m_PlaystationInput_UseLeftArm;
+        public InputAction @UseRightArm => m_Wrapper.m_PlaystationInput_UseRightArm;
+        public InputActionMap Get() { return m_Wrapper.m_PlaystationInput; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PlaystationInputActions set) { return set.Get(); }
+        public void AddCallbacks(IPlaystationInputActions instance)
+        {
+            if (instance == null || m_Wrapper.m_PlaystationInputActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_PlaystationInputActionsCallbackInterfaces.Add(instance);
+            @ContollerMovement.started += instance.OnContollerMovement;
+            @ContollerMovement.performed += instance.OnContollerMovement;
+            @ContollerMovement.canceled += instance.OnContollerMovement;
+            @Test.started += instance.OnTest;
+            @Test.performed += instance.OnTest;
+            @Test.canceled += instance.OnTest;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
+            @UseLeftArm.started += instance.OnUseLeftArm;
+            @UseLeftArm.performed += instance.OnUseLeftArm;
+            @UseLeftArm.canceled += instance.OnUseLeftArm;
+            @UseRightArm.started += instance.OnUseRightArm;
+            @UseRightArm.performed += instance.OnUseRightArm;
+            @UseRightArm.canceled += instance.OnUseRightArm;
+        }
+
+        private void UnregisterCallbacks(IPlaystationInputActions instance)
+        {
+            @ContollerMovement.started -= instance.OnContollerMovement;
+            @ContollerMovement.performed -= instance.OnContollerMovement;
+            @ContollerMovement.canceled -= instance.OnContollerMovement;
+            @Test.started -= instance.OnTest;
+            @Test.performed -= instance.OnTest;
+            @Test.canceled -= instance.OnTest;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
+            @UseLeftArm.started -= instance.OnUseLeftArm;
+            @UseLeftArm.performed -= instance.OnUseLeftArm;
+            @UseLeftArm.canceled -= instance.OnUseLeftArm;
+            @UseRightArm.started -= instance.OnUseRightArm;
+            @UseRightArm.performed -= instance.OnUseRightArm;
+            @UseRightArm.canceled -= instance.OnUseRightArm;
+        }
+
+        public void RemoveCallbacks(IPlaystationInputActions instance)
+        {
+            if (m_Wrapper.m_PlaystationInputActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IPlaystationInputActions instance)
+        {
+            foreach (var item in m_Wrapper.m_PlaystationInputActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_PlaystationInputActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public PlaystationInputActions @PlaystationInput => new PlaystationInputActions(this);
     public interface IMovementInputActions
     {
         void OnKeyboardMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnMouse(InputAction.CallbackContext context);
     }
-    public interface IControllerMovementInputActions
+    public interface IControllerInputActions
+    {
+        void OnContollerMovement(InputAction.CallbackContext context);
+        void OnTest(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+        void OnUseLeftArm(InputAction.CallbackContext context);
+        void OnUseRightArm(InputAction.CallbackContext context);
+    }
+    public interface IXboxInputActions
+    {
+        void OnContollerMovement(InputAction.CallbackContext context);
+        void OnTest(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+        void OnUseLeftArm(InputAction.CallbackContext context);
+        void OnUseRightArm(InputAction.CallbackContext context);
+    }
+    public interface IPlaystationInputActions
     {
         void OnContollerMovement(InputAction.CallbackContext context);
         void OnTest(InputAction.CallbackContext context);
